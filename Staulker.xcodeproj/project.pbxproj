@@ -13,6 +13,9 @@
 		0FE7A9AF251F8ABE00B1585E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FE7A9AD251F8ABE00B1585E /* Main.storyboard */; };
 		0FE7A9B1251F8AC100B1585E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FE7A9B0251F8AC100B1585E /* Assets.xcassets */; };
 		0FE7A9B4251F8AC100B1585E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FE7A9B2251F8AC100B1585E /* LaunchScreen.storyboard */; };
+		0FE7A9BC251FBBE100B1585E /* StockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE7A9BB251FBBE100B1585E /* StockManager.swift */; };
+		0FE7A9BE251FBC4F00B1585E /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE7A9BD251FBC4F00B1585E /* Stock.swift */; };
+		0FE7A9C0251FC9CA00B1585E /* StockCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE7A9BF251FC9CA00B1585E /* StockCodable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		0FE7A9B0251F8AC100B1585E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FE7A9B3251F8AC100B1585E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FE7A9B5251F8AC100B1585E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FE7A9BB251FBBE100B1585E /* StockManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockManager.swift; sourceTree = "<group>"; };
+		0FE7A9BD251FBC4F00B1585E /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		0FE7A9BF251FC9CA00B1585E /* StockCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockCodable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				0FE7A9B0251F8AC100B1585E /* Assets.xcassets */,
 				0FE7A9B2251F8AC100B1585E /* LaunchScreen.storyboard */,
 				0FE7A9B5251F8AC100B1585E /* Info.plist */,
+				0FE7A9BB251FBBE100B1585E /* StockManager.swift */,
+				0FE7A9BD251FBC4F00B1585E /* Stock.swift */,
+				0FE7A9BF251FC9CA00B1585E /* StockCodable.swift */,
 			);
 			path = Staulker;
 			sourceTree = "<group>";
@@ -138,8 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FE7A9BC251FBBE100B1585E /* StockManager.swift in Sources */,
+				0FE7A9C0251FC9CA00B1585E /* StockCodable.swift in Sources */,
 				0FE7A9AC251F8ABE00B1585E /* ViewController.swift in Sources */,
 				0FE7A9A8251F8ABE00B1585E /* AppDelegate.swift in Sources */,
+				0FE7A9BE251FBC4F00B1585E /* Stock.swift in Sources */,
 				0FE7A9AA251F8ABE00B1585E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

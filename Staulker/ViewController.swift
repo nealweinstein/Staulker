@@ -1,20 +1,45 @@
-//
-//  ViewController.swift
-//  Staulker
-//
-//  Created by Neal Weinstein on 2020-09-26.
-//  Copyright © 2020 Neal Weinstein. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
 
+
+  @IBOutlet weak var bgDateLbl: UILabel!
+  let BG_DATE_KEY: String = "bgDate"
+  let userDefaults = UserDefaults.standard
+
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
+    print("view did load")
+    loadBGDateStringToUI()
   }
+  
+  @IBAction func loadBGString(_ sender: UIButton) {
+    loadBGDateStringToUI()
+  }
+  
+  @IBAction func updateBGDate(_ sender: UIButton) {
 
+    print("Saving BG Date as String")
+    
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "MMM d h:mm a"
+    dateFormatter.locale = Locale(identifier: "en_US")       // US English Locale (en_US)
 
-}
+    let bgDate = dateFormatter.string(from: Date())
+    print("Saving: \(bgDate)")
+    self.userDefaults.set(bgDate, forKey: BG_DATE_KEY)
 
+  } // updateBGDate
+  
+  func loadBGDateStringToUI() {
+    print("Loading BG Date")
+ 
+    if let dateBGStr = self.userDefaults.object(forKey: BG_DATE_KEY) as? String {
+      bgDateLbl.text = dateBGStr
+    } else {
+      print("Could not load property for key \(BG_DATE_KEY)")
+    }
+  } // updateLastUsedLabelFormatted
+  
+} // vc
