@@ -3,7 +3,7 @@ import BackgroundTasks
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-  // e -l objc -- (void)[[BGTaskScheduler sharedScheduler] _simulateLaunchForTaskWithIdentifier:@"com.granitesoft.staulker"]
+  // e -l objc -- (void)[[BGTaskScheduler sharedScheduler] _simulateLaunchForTaskWithIdentifier:@"com.granitesoft.staulker.refresh"]
   
   let BG_DATE_KEY: String = "bgDate"
   let userDefaults = UserDefaults.standard
@@ -11,7 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
     //**-Register BG Task
-    BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.granitesoft.staulker", using: nil) { task in
+    BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.granitesoft.staulker.refresh", using: nil) { task in
       // Downcast the parameter to an app refresh task as this identifier is used for a refresh request.
       self.handleAppRefresh(task: task as! BGAppRefreshTask)
     }
@@ -28,8 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   //**-could also submit background processing tasks like db cleanup
   func scheduleAppRefresh() {
     print("in scheduleAppRefresh ")
-    let request = BGAppRefreshTaskRequest(identifier: "com.granitesoft.staulker")
-    request.earliestBeginDate = Date(timeIntervalSinceNow: 60) // Fetch no earlier than 1 minutes from now
+    let request = BGAppRefreshTaskRequest(identifier: "com.granitesoft.staulker.refresh")
+    request.earliestBeginDate = Date(timeIntervalSinceNow: 10) // Fetch no earlier than 1 minutes from no1
 
     do {
       try BGTaskScheduler.shared.submit(request)

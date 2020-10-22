@@ -13,6 +13,14 @@ class ViewController: UIViewController {
     print("view did load")
     loadBGDateStringToUI()
   }
+
+  override func viewDidAppear(_ animated: Bool) {
+    
+    super.viewDidAppear(animated)
+    print("view did appear")
+    loadBGDateStringToUI()
+  }
+  
   
   @IBAction func loadBGString(_ sender: UIButton) {
     loadBGDateStringToUI()
