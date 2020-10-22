@@ -10,18 +10,19 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    NotificationCenter.default.addObserver(self, selector: #selector(loadBGString), name: Notification.Name("updateTimeInfo"), object: nil)
+    
     print("view did load")
     loadBGDateStringToUI()
   }
 
   override func viewDidAppear(_ animated: Bool) {
-    
     super.viewDidAppear(animated)
     print("view did appear")
     loadBGDateStringToUI()
   }
-  
-  
+    
   @IBAction func loadBGString(_ sender: UIButton) {
     loadBGDateStringToUI()
   }

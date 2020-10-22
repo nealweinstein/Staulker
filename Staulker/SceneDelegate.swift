@@ -38,6 +38,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   }
 
   func sceneWillEnterForeground(_ scene: UIScene) {
+    
+    NotificationCenter.default.post(name: Notification.Name("updateTimeInfo"), object: nil)
+    
     // Called as the scene transitions from the background to the foreground.
     // Use this method to undo the changes made on entering the background.
   }
